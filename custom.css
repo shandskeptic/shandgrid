@@ -1,0 +1,119 @@
+/* Root CSS */
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --tertiary-color: grey;
+    --quaternary-color: limegreen;
+    --quinary-color: green;
+    --senary-color: red;
+    --septenary-color: #af2daf;
+
+    --body-background-color: grey;
+    --header-background-color: limegreen;
+    --sidebar-background-color: limegreen;
+    --main-background-color: limegreen;
+    --footer-background-color: limegreen;
+
+    --primary-size: 1rem;
+    --secondary-size: 1.25rem;
+}
+
+/* Reset CSS */
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cardo', Arial, sans-serif;
+    font-size: var(--primary-size);
+    color: var(--tertiary-color);
+}
+
+/* Custom Font */
+@font-face {
+    font-family: 'Cardo';
+    src: url('./Cardo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Fancy';
+    src: url('./FancyCardText.ttf');
+}
+
+@font-face {
+    font-family: 'RockSalt';
+    src: url('./RockSalt-Regular.ttf');
+}
+
+/* Webkit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--quinary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--quinary-color);
+}
+
+
+* {
+    scrollbar-color: var(--secondary-color) #f1f1f1;
+}
+
+*::-moz-scrollbar {
+    width: 12px;
+}
+
+*::-moz-scrollbar-track {
+    background-color: var(--primary-color);
+}
+
+*::-moz-scrollbar-thumb {
+    background-color: var(--quinary-color);
+}
+
+/* Dark Mode */
+:root:has(#light:checked) {
+    ::-webkit-scrollbar-track {
+        background-color: var(--secondary-color);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #802380;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #802380;
+    }
+
+
+    .main-navigation {
+        background-color: var(--secondary-color);
+        z-index: 1;
+    }
+
+    .main-content {
+        background-color: var(--septenary-color);
+        color: var(--primary-color);
+    }
+
+    .navigation>span>form>label>i {
+        color: var(--septenary-color);
+    }
+
+    .sidebar {
+        background-color: var(--secondary-color);
+    }
+
+    .site-footer {
+        background-color: var(--septenary-color);
+        color: var(--secondary-color);
+    }
+}
